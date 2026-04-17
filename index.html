@@ -4,56 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Wear Shop</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50; /* Better green branding */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .product-showcase {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-        }
-        .product {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px;
-            padding: 10px;
-            width: 30%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .product:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to School Wear Shop</h1>
-        <p>Your one-stop shop for quality school wear.</p>
+    <header style="background-color: green; padding: 20px;">
+        <img src="logo.png" alt="Shop Logo" style="height: 50px;">
+        <nav>
+            <ul style="list-style-type:none; display: flex;">
+                <li style="margin-right: 20px;"><a href="#home">Home</a></li>
+                <li style="margin-right: 20px;"><a href="#products">Products</a></li>
+                <li style="margin-right: 20px;"><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="product-showcase">
-        <div class="product">
-            <h2>Product 1</h2>
-            <p>Description of Product 1</p>
+    <main>
+        <section id="products" style="padding: 20px;">
+            <h2>Product Showcase</h2>
+            <div class="product-item" style="margin-bottom: 20px;">
+                <h3>School Uniform</h3>
+                <p>High-quality uniforms for all grades. Price: $50</p>
+            </div>
+            <div class="product-item" style="margin-bottom: 20px;">
+                <h3>Backpack</h3>
+                <p>Durable and stylish backpacks for school. Price: $30</p>
+            </div>
+            <div class="product-item" style="margin-bottom: 20px;">
+                <h3>Stationery Set</h3>
+                <p>Complete stationery set for students. Price: $15</p>
+            </div>
+        </section>
+    </main>
+    <footer style="background-color: #f1f1f1; padding: 20px;">
+        <div>
+            <h4>Company Information</h4>
+            <p>123 School St, Education City, Country</p>
         </div>
-        <div class="product">
-            <h2>Product 2</h2>
-            <p>Description of Product 2</p>
+        <div>
+            <h4>Follow Us</h4>
+            <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
         </div>
-        <div class="product">
-            <h2>Product 3</h2>
-            <p>Description of Product 3</p>
+        <div>
+            <h4>Contact Us</h4>
+            <p>Email: info@schoolwearshop.com</p>
         </div>
-    </div>
+    </footer>
 </body>
 </html>
