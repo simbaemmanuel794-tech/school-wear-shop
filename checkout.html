@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    
+    <h2>Billing Information</h2>
+    <form id="billing-info">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+        
+        <input type="submit" value="Continue to Payment">
+    </form>
+
+    <h2>Order Summary</h2>
+    <div id="order-summary">
+        <p>Item Name: Example Item</p>
+        <p>Price: Ksh. 1,000.00</p>
+        <p>Tax (16%): Ksh. 160.00</p>
+        <p>Total: Ksh. 1,160.00</p>
+    </div>
+
+    <h2>Payment Options</h2>
+    <form id="payment-options">
+        <h3>M-Pesa Payment</h3>
+        <label for="mpesa-number">M-Pesa Number:</label>
+        <input type="tel" id="mpesa-number" name="mpesa-number" required><br><br>
+
+        <h3>Credit/Debit Card Payment</h3>
+        <label for="card-number">Card Number:</label>
+        <input type="text" id="card-number" name="card-number" required><br><br>
+
+        <label for="expiry-date">Expiry Date (MM/YY):</label>
+        <input type="text" id="expiry-date" name="expiry-date" required><br><br>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required><br><br>
+
+        <input type="submit" value="Pay Now">
+    </form>
+</body>
+</html>
