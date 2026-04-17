@@ -1,1 +1,59 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>School Wear Shop</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            margin: 0;\n            padding: 0;\n        }\n        header {\n            background-color: #4CAF50;\n            color: white;\n            padding: 10px 20px;\n            text-align: center;\n        }\n        .product-showcase {\n            display: flex;\n            flex-wrap: wrap;\n            justify-content: center;\n            padding: 20px;\n        }\n        .product card {\n            border: 1px solid #ddd;\n            border-radius: 5px;\n            margin: 10px;\n            padding: 10px;\n            width: 200px;\n            text-align: center;\n        }\n        footer {\n            background-color: #4CAF50;\n            color: white;\n            text-align: center;\n            padding: 10px 0;\n            position: fixed;\n            bottom: 0;\n            width: 100%;\n        }\n        @media (max-width: 600px) {\n            .product-showcase {\n                flex-direction: column;\n                align-items: center;\n            }\n            .product {\n                width: 90%;\n            }\n        }\n    </style>\n</head>\n<body>\n    <header>\n        <h1>Welcome to Our School Wear Shop</h1>\n    </header>\n    <div class="product-showcase">\n        <div class="product">\n            <h2>School Uniform</h2>\n            <p>High quality school uniform available in various sizes.</p>\n            <p>Price: $30</p>\n        </div>\n        <div class="product">\n            <h2>Backpack</h2>\n            <p>Durable backpack for all your school supplies.</p>\n            <p>Price: $20</p>\n        </div>\n        <div class="product">\n            <h2>Stationery Set</h2>\n            <p>Complete stationery set for students.</p>\n            <p>Price: $15</p>\n        </div>\n    </div>\n    <footer>\n        <p>&copy; 2026 School Wear Shop. All Rights Reserved.</p>\n    </footer>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Wear Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50; /* Better green branding */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .product-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: 30%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to School Wear Shop</h1>
+        <p>Your one-stop shop for quality school wear.</p>
+    </header>
+    <div class="product-showcase">
+        <div class="product">
+            <h2>Product 1</h2>
+            <p>Description of Product 1</p>
+        </div>
+        <div class="product">
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+        </div>
+        <div class="product">
+            <h2>Product 3</h2>
+            <p>Description of Product 3</p>
+        </div>
+    </div>
+</body>
+</html>
