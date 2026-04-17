@@ -7,47 +7,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header style="background-color: green; padding: 20px;">
-        <img src="logo.png" alt="Shop Logo" style="height: 50px;">
-        <nav>
-            <ul style="list-style-type:none; display: flex;">
-                <li style="margin-right: 20px;"><a href="#home">Home</a></li>
-                <li style="margin-right: 20px;"><a href="#products">Products</a></li>
-                <li style="margin-right: 20px;"><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+        <h1 style="background-color: green; color: white; text-align: center;">School Wear Shop</h1>
+        <div id="cart-counter">Items in Cart: <span id="item-count">0</span></div>
     </header>
     <main>
-        <section id="products" style="padding: 20px;">
-            <h2>Product Showcase</h2>
-            <div class="product-item" style="margin-bottom: 20px;">
+        <section id="product-showcase">
+            <h2>Products</h2>
+            <div class="product" data-name="School Uniform">
                 <h3>School Uniform</h3>
-                <p>High-quality uniforms for all grades. Price: $50</p>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
-            <div class="product-item" style="margin-bottom: 20px;">
+            <div class="product" data-name="Backpack">
                 <h3>Backpack</h3>
-                <p>Durable and stylish backpacks for school. Price: $30</p>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
-            <div class="product-item" style="margin-bottom: 20px;">
+            <div class="product" data-name="Stationery Set">
                 <h3>Stationery Set</h3>
-                <p>Complete stationery set for students. Price: $15</p>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </section>
     </main>
-    <footer style="background-color: #f1f1f1; padding: 20px;">
-        <div>
-            <h4>Company Information</h4>
-            <p>123 School St, Education City, Country</p>
-        </div>
-        <div>
-            <h4>Follow Us</h4>
-            <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
-        </div>
-        <div>
-            <h4>Contact Us</h4>
-            <p>Email: info@schoolwearshop.com</p>
-        </div>
-    </footer>
+    <script>
+        let cartCount = 0;
+        const buttons = document.querySelectorAll('.add-to-cart');
+        const itemCountElement = document.getElementById('item-count');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                itemCountElement.textContent = cartCount;
+                notifyUser();
+                saveToLocalStorage(cartCount);
+            });
+        });
+
+        function notifyUser() {
+            alert('Item added to cart!');
+        }
+
+        function saveToLocalStorage(count) {
+            localStorage.setItem('cartCount', count);
+        }
+    </script>
 </body>
 </html>
